@@ -1,0 +1,98 @@
+body {
+  text-align: center;
+ background-image: url(./images/ganeshmaharaj.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+h1 {
+  font-size: 5rem;
+  color: black;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+
+}
+
+footer {
+  color: black;
+  font-family: sans-serif;
+}
+
+.g {
+  background-image: url("images/tom1.png");
+}
+
+.a {
+  background-image: url("images/tom2.png");
+}
+
+.n {
+  background-image: url("images/image.jpg");
+  background-size: cover;
+}
+
+.e {
+  background-image: url("images/images.jpeg");
+  background-size: cover;
+ 
+}
+
+.s {
+  background-image: url("images/snare.png");
+}
+
+.h {
+  background-image: url("images/crash.png");
+}
+
+.A {
+  background-image: url("images/kick.png");
+}
+
+.set {
+  margin: 10% auto;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
+
+.drum {
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+}
+.vi{
+  color: brown;
+  font-size: 25px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.su{
+  font-size: 33px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow:3px 0 lightgreen;
+}
+.si{
+  color:rgb(130, 13, 0);
+  font-size: 40px;
+  font-style: italic;
+
+}
