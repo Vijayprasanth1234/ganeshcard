@@ -22,7 +22,6 @@
 
 // });
 
-
 // function makeSound(key) {
 
 //   switch (key) {
@@ -48,24 +47,24 @@
 
 //     case "s":
 //       var snare = new Audio('sounds/ganesh5.mp3');
-//       snare.play();
-//       break;
+// //       snare.play();
+// //       break;
 
-//     case "h":
-//       var crash = new Audio('sounds/ganesh6.mp3');
-//       crash.play();
-//       break;
+// //     case "h":
+// //       var crash = new Audio('sounds/ganesh6.mp3');
+// //       crash.play();
+// //       break;
 
-//     case "A":
-//       var kick = new Audio('sounds/kick-bass.mp3');
-//       kick.play();
-//       break;
+// //     case "A":
+// //       var kick = new Audio('sounds/kick-bass.mp3');
+// //       kick.play();
+// //       break;
 
 
-//     default: console.log(key);
+// //     default: console.log(key);
 
-//   }
-// }
+// //   }
+// // }
 
 
 // function buttonAnimation(currentKey) {

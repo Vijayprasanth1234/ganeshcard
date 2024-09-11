@@ -96,3 +96,32 @@ footer {
   font-style: italic;
 
 }
+
+label{
+  color: darkcyan;
+  font-size: 30px
+}
+input{
+  height: 40px; 
+  border: 2px solid;
+  width: 90vw;
+  box-shadow: 0 0 10em;
+}
+#title{
+  font-size: 30px;
+  
+}
+footer{
+  float: left; margin-left: 100px;
+}
+#title1{
+ font-size: 60px;
+ 
+}
+.vo{
+  font-size: 40px;
+  color: black;
+}
+fieldset{
+  box-shadow: 0 0 10em;
+}
