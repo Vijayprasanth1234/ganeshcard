@@ -143,7 +143,7 @@ function makeSound(key) {
       kick.play();
       break;
 
-    default: console.log(key);
+    default: console.log(`${key}`);
   }
 }
 
