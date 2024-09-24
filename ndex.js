@@ -163,7 +163,6 @@
 //   }, 100);
 // }
 
-
 var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 var currentlyPlaying = [];
 
@@ -183,6 +182,17 @@ document.addEventListener("keydown", function(event) {
   stopCurrentlyPlaying();
   makeSound(key);
   buttonAnimation(key);
+});
+
+// Add event listener for mobile device touch events (fallback)
+document.addEventListener("touchstart", function(event) {
+  var target = event.target;
+  if (target.classList.contains("drum")) {
+    var buttonInnerHTML = target.innerHTML;
+    stopCurrentlyPlaying();
+    makeSound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
+  }
 });
 
 function makeSound(key) {
@@ -248,3 +258,4 @@ function buttonAnimation(currentKey) {
     activeButton.classList.remove("pressed");
   }, 100);
 }
+
