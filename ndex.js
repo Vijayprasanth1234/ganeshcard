@@ -81,6 +81,10 @@
 
 
 
+
+
+
+
 // var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 // var currentlyPlaying = [];
 
@@ -93,10 +97,21 @@
 //   });
 // }
 
-// document.addEventListener("keypress", function(event) {
+// document.addEventListener("keydown", function(event) {
+//   var key = event.key.toLowerCase();
 //   stopCurrentlyPlaying();
-//   makeSound(event.key);
-//   buttonAnimation(event.key);
+//   makeSound(key);
+//   buttonAnimation(key);
+// });
+
+// document.addEventListener("touchstart", function(event) {
+//   var target = event.target;
+//   if (target.classList.contains("drum")) {
+//     var buttonInnerHTML = target.innerHTML;
+//     stopCurrentlyPlaying();
+//     makeSound(buttonInnerHTML);
+//     buttonAnimation(buttonInnerHTML);
+//   }
 // });
 
 // function makeSound(key) {
@@ -137,7 +152,7 @@
 //       crash.play();
 //       break;
 
-//     case "A":
+//     case "a" || key === "A":
 //       var kick = new Audio('sounds/ganesh2.mp3');
 //       currentlyPlaying.push(kick);
 //       kick.play();
@@ -163,32 +178,31 @@
 //   }, 100);
 // }
 
+
+
 var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 var currentlyPlaying = [];
 
 for (var i = 0; i < numberOfDrumButtons; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function() {
-    var buttonInnerHTML = this.innerHTML;
+    var buttonInnerHTML = this.innerHTML.toLowerCase(); // Convert to lowercase
     stopCurrentlyPlaying();
     makeSound(buttonInnerHTML);
     buttonAnimation(buttonInnerHTML);
   });
 }
 
-// Add event listener for mobile device keyboards
 document.addEventListener("keydown", function(event) {
-  if (event.metaKey || event.ctrlKey) return; // Ignore meta keys (e.g., cmd, ctrl)
-  var key = event.key.toLowerCase(); // Convert to lowercase for consistency
+  var key = event.key.toLowerCase();
   stopCurrentlyPlaying();
   makeSound(key);
   buttonAnimation(key);
 });
 
-// Add event listener for mobile device touch events (fallback)
 document.addEventListener("touchstart", function(event) {
   var target = event.target;
   if (target.classList.contains("drum")) {
-    var buttonInnerHTML = target.innerHTML;
+    var buttonInnerHTML = target.innerHTML.toLowerCase(); // Convert to lowercase
     stopCurrentlyPlaying();
     makeSound(buttonInnerHTML);
     buttonAnimation(buttonInnerHTML);
@@ -233,12 +247,6 @@ function makeSound(key) {
       crash.play();
       break;
 
-    case "a" || key === "A":
-      var kick = new Audio('sounds/ganesh2.mp3');
-      currentlyPlaying.push(kick);
-      kick.play();
-      break;
-
     default: console.log(`${key}`);
   }
 }
@@ -258,4 +266,3 @@ function buttonAnimation(currentKey) {
     activeButton.classList.remove("pressed");
   }, 100);
 }
-
